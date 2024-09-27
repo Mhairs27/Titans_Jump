@@ -1,54 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/main_bg"
-    android:gravity="center"
+    android:background="@drawable/home_page"
     android:orientation="vertical"
-    tools:context="MainActivity">
+    tools:context=".MainActivity">
 
 
-    <ImageButton
-        android:id="@+id/setting_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/setting"
-        android:contentDescription="@string/setting_icon"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginEnd="16dp"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/start_btn"
-        android:layout_width="215dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="316dp"
-        android:background="@drawable/start_btn"
-        android:contentDescription="@string/start_game"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting_icon" />
+        <Button
+            android:id="@+id/setting_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/settings_icon"
+            android:contentDescription="@string/setting_icon"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/opt_btn"
-        android:layout_width="215dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/opt_btn"
-        android:contentDescription="@string/option_game"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_btn" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="350dp">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/start_btn"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/start_btn"
+                android:contentDescription="@string/start_game"/>
+
+            <Button
+                android:id="@+id/opt_btn"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/opt_btn"
+                android:contentDescription="@string/option_game"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

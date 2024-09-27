@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_bg"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+    <!-- Pause button -->
+    <ImageButton
+        android:id="@+id/pause_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pause_icon"
+        android:contentDescription="@string/pause_icon"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:layout_margin="25dp" />
+
+    <!-- Score display -->
+
+    <!-- Best score display -->
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/score"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/best_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/best"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
+    </LinearLayout>

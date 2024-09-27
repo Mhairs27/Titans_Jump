@@ -1,158 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
-    android:gravity="center"
+    android:background="@drawable/bg_main"
     android:orientation="vertical"
-    tools:context="MainActivity">
+    tools:context=".OptionActivity">
 
+    <!-- Top section with home and settings icons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginBottom="40dp">
 
-    <ImageButton
-        android:id="@+id/home_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="285dp"
-        android:layout_marginBottom="62dp"
-        android:background="@drawable/home_icon"
-        android:contentDescription="@string/home_icon"
-        app:layout_constraintBottom_toTopOf="@+id/tv_chartext"
-        app:layout_constraintEnd_toStartOf="@+id/setting_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Home Button on the top left -->
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/home_icon"
+            android:contentDescription="@string/home_icon"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
 
-    <ImageButton
-        android:id="@+id/setting_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="@+id/home_icon"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="62dp"
-        android:background="@drawable/setting"
-        android:contentDescription="@string/settings_page"
-        app:layout_constraintBottom_toTopOf="@+id/tv_chartext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/home_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Settings Button on the top right -->
+        <ImageButton
+            android:id="@+id/setting_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/settings_icon"
+            android:contentDescription="@string/settings_page"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
 
+    <!-- Title: Select Your Character -->
     <TextView
         android:id="@+id/tv_chartext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/righteous"
-        android:text="@string/character_text"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
-
-    <LinearLayout
-        android:id="@+id/character_card1"
-        android:layout_width="220dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="296dp"
-        android:background="@color/white"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next_btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_name">
+        android:background="@drawable/tv_select"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
 
+    <!-- Character Image and Name -->
 
-        <ImageView
-            android:id="@+id/character_display"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="350dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="342dp"
-            android:contentDescription="@string/character_des"
-            android:src="@drawable/character1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/character_name" />
+    <!-- Buttons placed horizontally -->
+    <LinearLayout
+        android:id="@+id/character_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
+        <!-- Character Image inside a card-like layout -->
+        <LinearLayout
+            android:id="@+id/character_card1"
+            android:layout_width="220dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/character_display"
+                android:layout_width="300dp"
+                android:layout_height= "250dp"
+                android:contentDescription="@string/character_des"
+                android:src="@drawable/character1" />
+        </LinearLayout>
+
+        <!-- Character Name below the character image -->
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/righteous"
+            android:gravity="center"
+            android:text="@string/character1"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/prev_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@+id/home_icon"
+            android:layout_marginEnd="150dp"
+            android:background="@drawable/left_arrow"
+            android:contentDescription="@string/left_arrow" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="@+id/character_layout"
+            android:layout_marginBottom="1000dp"
+            android:background="@drawable/right_arrow"
+            android:contentDescription="@string/right_arrow" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/character_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/righteous"
-        android:text="@string/character1"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/character_card1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chartext" />
-
-    <Button
-        android:id="@+id/prev_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="430dp"
-        android:background="@drawable/left_arrow"
-        android:contentDescription="@string/left_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/character_card1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chartext" />
-
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="428dp"
-        android:background="@drawable/right_arrow"
-        android:contentDescription="@string/right_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/character_card1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chartext" />
 
     <Button
         android:id="@+id/select_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="189dp"
-        android:layout_marginBottom="232dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:text="@string/select_characters"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character_card1" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="@+id/character_layout"
+        android:contentDescription="@string/right_arrow" />
 
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
