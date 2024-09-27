@@ -1,0 +1,50 @@
+<resources>
+    <!-- HOME PAGE -->
+    <string name="app_name">Titans_Jump</string>
+    <string name="start_game">Start Game</string>
+    <string name="option_game">Option Game</string>
+
+    <!-- OPTION PAGE/CHARACTER SELECTION -->
+    <string name="character_text">Select Your Character:</string>
+    <string name="character1">Mhairs</string>
+    <string name="character2">Charls</string>
+    <string name="character3">Abegail</string>
+    <string name="character4">Jayson</string>
+    <string name="character5">Kate</string>
+    <string name="character_des">Displayed Character</string>
+    <string name="left_arrow">Previous Characters</string>
+    <string name="right_arrow">Next Characters</string>
+    <string name="select_characters">Select</string>
+
+    <!-- SETTINGS PAGE -->
+    <string name="settings_page">SETTINGS</string>
+    <string name="settings_music">Music</string>
+    <string name="settings_sounds">Sound</string>
+    <string name="music_on">ON</string>
+    <string name="music_off">OFF</string>
+    <string name="sound_on">ON</string>
+    <string name="sound_off">OFF</string>
+
+    <!-- PAUSE PAGE -->
+    <string name="resume_btn">RESUME</string>
+    <string name="settings_btn">SETTINGS</string>
+    <string name="restart_btn">RESTART</string>
+    <string name="quit_btn">QUIT</string>
+
+    <!-- ICON -->
+    <string name="home_icon">Home Page</string>
+    <string name="setting_icon">Settings Page</string>
+    <string name="pause_icon">Pause Page</string>
+
+    <!-- LABEL -->
+    <string name="settings_label">SettingsActivity</string>
+    <string name="game_label">GameActivity</string>
+    <string name="option_label">OptionActivity</string>
+
+    <!-- SCORE -->
+    <string name="score">Score: 0</string>
+    <string name="best">Best Score: 0</string>
+
+
+
+</resources>
