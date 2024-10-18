@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/main_bg"
+    android:padding="16dp"
+    tools:context=".LogInActivity">
+
+    <!-- ImageView for logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo"
+        android:layout_marginBottom="50dp" />
+
+    <!-- Username input field -->
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/userinput"
+        android:inputType="textPersonName"
+        android:autofillHints="username"
+        android:background="@drawable/userinput"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Enter button -->
+    <Button
+        android:id="@+id/enter_btn"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/enter_username"
+        android:textColor="@android:color/black"
+        android:background="@drawable/enter_btn"
+        android:layout_gravity="center"
+        android:padding="10dp" />
+
+</LinearLayout>
