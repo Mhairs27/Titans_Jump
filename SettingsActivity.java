@@ -15,7 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.setting_activity);
 
         // Initialize RadioButtons and preferences
         onMusic = findViewById(R.id.on_music);
@@ -30,8 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
         // Load saved preferences for music and sound
         boolean isMusicOn = sharedPreferences.getBoolean("music", true);
         boolean isSoundOn = sharedPreferences.getBoolean("sound", true);
-
-        // Set RadioButton states based on saved preferences
+// Set RadioButton states based on saved preferences
         onMusic.setChecked(isMusicOn);
         offMusic.setChecked(!isMusicOn);
         onSound.setChecked(isSoundOn);
